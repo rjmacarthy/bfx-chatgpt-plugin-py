@@ -1,6 +1,6 @@
 ## ChatGPT Plugin for Bitfinex Public API
 
-This is an unofficial ChatGPT plugin for the [Bitfinex](https://www.bitfinex.com) currency exchange.
+This is an **unofficial** ChatGPT plugin for the [Bitfinex](https://www.bitfinex.com) currency exchange.
 
 This ChatGPT plugin integrates with the Bitfinex Public API, enabling users to access data and analysis related to cryptocurrency trading within the ChatGPT environment.
 
