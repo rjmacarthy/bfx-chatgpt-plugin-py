@@ -183,7 +183,10 @@
             "required":true,
             "schema":{
               "type":"string",
-              "default":"1m"
+              "default":"1m",
+              "enum":[
+                "1m"
+              ]
             }
           },
           {
@@ -203,7 +206,11 @@
             "required":true,
             "schema":{
               "type":"string",
-              "default":"long"
+              "default":"long",
+              "enum":[
+                "long",
+                "short"
+              ]
             }
           },
           {
@@ -213,7 +220,10 @@
             "required":true,
             "schema":{
               "type":"string",
-              "default":"hist"
+              "default":"hist",
+              "enum": [
+                "hist"
+              ]
             }
           }
         ],

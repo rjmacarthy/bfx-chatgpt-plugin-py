@@ -20,9 +20,9 @@ def tickers():
     return jsonify(get_tickers(symbols)), 200
 
 
-@app.route("/stats/<key>/<timeframe>/<symbol>/<side>/<section>")
+@app.route("/stats")
 def stats():
-    key = request.args.get("key") or "funding.size"
+    key = request.args.get("key") or "pos.size"
     timeframe = request.args.get("timeframe") or "1m"
     symbol = request.args.get("symbol") or "fUSD"
     side = request.args.get("side") or "long"
