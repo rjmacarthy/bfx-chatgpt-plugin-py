@@ -1,0 +1,18 @@
+{
+	"schema_version": "v1",
+	"name_for_model": "BitfinexAnalysis",
+	"name_for_human": "Bitfinex Analysis",
+	"description_for_human": "Analyzes data from Bitfinex cryptocurrency exchange.",
+	"description_for_model": "The assistant uses data from the Bitfinex api to make decisions on whether the user should buy or sell a cryptocurrency. Stats about the currency are provides as well. Use the stats to make your own decisions. Don't return the JSON data object just return the analysis.",
+	"api": {
+		"type": "openapi",
+		"url": "http://localhost:3333/openapi.json",
+	  	"has_user_authentication": false
+	},
+	"auth": {
+	  "type": "none"
+	},
+	"logo_url": "https://www.bitfinex.com/images/thumbnails/bitfinex-2.png",
+	"contact_email": "support@bitfinex.com",
+	"legal_info_url": "https://www.bitfinex.com/legal/privacy"
+  }
