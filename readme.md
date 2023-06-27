@@ -4,7 +4,7 @@ This is an **unofficial** ChatGPT plugin for the [Bitfinex](https://www.bitfinex
 
 This ChatGPT plugin integrates with the Bitfinex Public API, enabling users to access data and analysis related to cryptocurrency trading within the ChatGPT environment.
 
-### Development:
+### Development / Usage:
 
 You can run this plugin on localhost.
 
