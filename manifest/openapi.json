@@ -1,247 +1,247 @@
 {
-	"info": {
-		"title": "Bitfinex Public API",
-		"version": "1.0"
-	},
-	"openapi": "3.0.0",
-	"paths": {
-		"/candles": {
-			"get": {
-				"operationId": "getCandles",
-				"parameters": [
-					{
-						"description": "The symbol to get candles for",
-						"in": "query",
-						"name": "symbol",
-						"required": true,
-						"schema": {
-							"type": "string"
-						}
-					}
-				],
-				"responses": {
-					"200": {
-						"description": "An analysis of the symbol based on the candles retrieved from Bitfinex API",
-						"content": {
-							"application/json": {
-								"schema": {
-									"type": "array",
-									"items": {
-										"type": "object",
-										"properties": {
-											"analysis": {
-												"type": "string"
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				},
-				"summary": "Get candles and analyses for a given symbol"
-			}
-		},
-		"/tickers": {
-			"get": {
-				"operationId": "getTickers",
-				"parameters": [
-					{
-						"description": "Comma-separated list of symbols, e.g., tBTCUSD,tETHUSD",
-						"in": "query",
-						"name": "symbols",
-						"required": true,
-						"schema": {
-							"type": "string"
-						}
-					}
-				],
-				"responses": {
-					"200": {
-						"description": "An analysis of tickers for the given symbols whether they are bullish or bearish",
-						"content": {
-							"application/json": {
-								"schema": {
-									"type": "array",
-									"items": {
-										"type": "object",
-										"properties": {
-											"analysis": {
-												"type": "string",
-												"example": "Based on the ticker, the price is likely to go up"
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				},
-				"summary": "Returns the analysis of tickers for the given symbols whether they are bullish or bearish"
-			}
-		},
-		"/book": {
-			"get": {
-				"operationId": "getBook",
-				"parameters": [
-					{
-						"description": "The symbol to get book for",
-						"in": "query",
-						"name": "symbol",
-						"required": true,
-						"schema": {
-							"type": "string",
-							"default": "tBTCUSD"
-						}
-					},
-					{
-						"description": "The precision of the book",
-						"in": "query",
-						"name": "precision",
-						"required": true,
-						"schema": {
-							"type": "string",
-							"default": "P0"
-						}
-					}
-				],
-				"responses": {
-					"200": {
-						"description": "OK",
-						"content": {
-							"application/json": {
-								"schema": {
-									"type": "object",
-									"properties": {
-										"analysis": {
-											"type": "string",
-											"example": "Based on the book, the price is likely to go up"
-										}
-									}
-								}
-							}
-						}
-					}
-				},
-				"summary": "Return the analysis of the book"
-			}
-		},
-		"/analysis": {
-			"get": {
-				"operationId": "getAnalysis",
-				"summary": "Return the analysis of the symbol not the data itself",
-				"parameters": [
-					{
-						"description": "The symbol to get analysis for",
-						"in": "query",
-						"name": "symbol",
-						"required": true,
-						"schema": {
-							"type": "string",
-							"default": "tBTCUSD"
-						}
-					}
-				],
-				"responses": {
-					"200": {
-						"description": "OK",
-						"content": {
-							"application/json": {
-								"schema": {
-									"type": "object",
-									"properties": {
-										"analysis": {
-											"type": "string",
-											"example": "Based on the analysis, is the price is likely to go up."
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		},
-		"/stats": {
-			"get": {
-				"operationId": "getStats",
-				"parameters": [
-					{
-						"description": "The symbol to get stats for",
-						"in": "query",
-						"name": "symbol",
-						"required": true,
-						"schema": {
-							"type": "string",
-							"default": "tBTCUSD"
-						}
-					},
-					{
-						"description": "The period to get stats for",
-						"in": "query",
-						"name": "timeframe",
-						"required": true,
-						"schema": {
-							"type": "string",
-							"default": "1m"
-						}
-					},
-					{
-						"description": "The key to get stats for",
-						"in": "query",
-						"name": "key",
-						"required": true,
-						"schema": {
-							"type": "string",
-							"default": "pos.size"
-						}
-					},
-					{
-						"description": "The side to get stats for",
-						"in": "query",
-						"name": "side",
-						"required": true,
-						"schema": {
-							"type": "string",
-							"default": "long"
-						}
-					},
-					{
-						"description": "The section to get stats for",
-						"in": "query",
-						"name": "section",
-						"required": true,
-						"schema": {
-							"type": "string",
-							"default": "hist"
-						}
-					}
-				],
-				"responses": {
-					"200": {
-						"description": "OK",
-						"content": {
-							"application/json": {
-								"schema": {
-									"type": "object",
-									"properties": {
-										"analysis": {
-											"type": "string",
-											"example": "Based on the stats, the price is likely to go up"
-										}
-									}
-								}
-							}
-						}
-					}
-				},
-				"summary": "Return the analysis"
-			}
-		}
-	},
-	"servers": [
-		{
-			"url": "http://localhost:3333"
-		}
-	]
+  "info":{
+    "title":"Bitfinex Public API",
+    "version":"1.0"
+  },
+  "openapi":"3.0.0",
+  "paths":{
+    "/candles":{
+      "get":{
+        "operationId":"getCandles",
+        "parameters":[
+          {
+            "description":"The symbol to get candles for",
+            "in":"query",
+            "name":"symbol",
+            "required":true,
+            "schema":{
+              "type":"string"
+            }
+          }
+        ],
+        "responses":{
+          "200":{
+            "description":"An analysis of the symbol based on the candles retrieved from Bitfinex API",
+            "content":{
+              "application/json":{
+                "schema":{
+                  "type":"array",
+                  "items":{
+                    "type":"object",
+                    "properties":{
+                      "analysis":{
+                        "type":"string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "summary":"Get candles and analyses for a given symbol"
+      }
+    },
+    "/tickers":{
+      "get":{
+        "operationId":"getTickers",
+        "parameters":[
+          {
+            "description":"Comma-separated list of symbols, e.g., tBTCUSD,tETHUSD",
+            "in":"query",
+            "name":"symbols",
+            "required":true,
+            "schema":{
+              "type":"string"
+            }
+          }
+        ],
+        "responses":{
+          "200":{
+            "description":"An analysis of tickers for the given symbols whether they are bullish or bearish",
+            "content":{
+              "application/json":{
+                "schema":{
+                  "type":"array",
+                  "items":{
+                    "type":"object",
+                    "properties":{
+                      "analysis":{
+                        "type":"string",
+                        "example":"Based on the ticker, the price is likely to go up"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "summary":"Returns the analysis of tickers for the given symbols whether they are bullish or bearish"
+      }
+    },
+    "/book":{
+      "get":{
+        "operationId":"getBook",
+        "parameters":[
+          {
+            "description":"The symbol to get book for",
+            "in":"query",
+            "name":"symbol",
+            "required":true,
+            "schema":{
+              "type":"string",
+              "default":"tBTCUSD"
+            }
+          },
+          {
+            "description":"The precision of the book",
+            "in":"query",
+            "name":"precision",
+            "required":true,
+            "schema":{
+              "type":"string",
+              "default":"P0"
+            }
+          }
+        ],
+        "responses":{
+          "200":{
+            "description":"OK",
+            "content":{
+              "application/json":{
+                "schema":{
+                  "type":"object",
+                  "properties":{
+                    "analysis":{
+                      "type":"string",
+                      "example":"Based on the book, the price is likely to go up"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "summary":"Return the analysis of the book"
+      }
+    },
+    "/analysis":{
+      "get":{
+        "operationId":"getAnalysis",
+        "summary":"Return the analysis of the symbol not the data itself",
+        "parameters":[
+          {
+            "description":"The symbol to get analysis for",
+            "in":"query",
+            "name":"symbol",
+            "required":true,
+            "schema":{
+              "type":"string",
+              "default":"tBTCUSD"
+            }
+          }
+        ],
+        "responses":{
+          "200":{
+            "description":"OK",
+            "content":{
+              "application/json":{
+                "schema":{
+                  "type":"object",
+                  "properties":{
+                    "analysis":{
+                      "type":"string",
+                      "example":"Based on the analysis, is the price is likely to go up."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/stats":{
+      "get":{
+        "operationId":"getStats",
+        "parameters":[
+          {
+            "description":"The symbol to get stats for",
+            "in":"query",
+            "name":"symbol",
+            "required":true,
+            "schema":{
+              "type":"string",
+              "default":"tBTCUSD"
+            }
+          },
+          {
+            "description":"The period to get stats for",
+            "in":"query",
+            "name":"timeframe",
+            "required":true,
+            "schema":{
+              "type":"string",
+              "default":"1m"
+            }
+          },
+          {
+            "description":"The key to get stats for",
+            "in":"query",
+            "name":"key",
+            "required":true,
+            "schema":{
+              "type":"string",
+              "default":"pos.size"
+            }
+          },
+          {
+            "description":"The side to get stats for",
+            "in":"query",
+            "name":"side",
+            "required":true,
+            "schema":{
+              "type":"string",
+              "default":"long"
+            }
+          },
+          {
+            "description":"The section to get stats for",
+            "in":"query",
+            "name":"section",
+            "required":true,
+            "schema":{
+              "type":"string",
+              "default":"hist"
+            }
+          }
+        ],
+        "responses":{
+          "200":{
+            "description":"OK",
+            "content":{
+              "application/json":{
+                "schema":{
+                  "type":"object",
+                  "properties":{
+                    "analysis":{
+                      "type":"string",
+                      "example":"Based on the stats, the price is likely to go up"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "summary":"Return the analysis"
+      }
+    }
+  },
+  "servers":[
+    {
+      "url":"http://localhost:3333"
+    }
+  ]
 }
