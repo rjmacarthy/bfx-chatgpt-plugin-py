@@ -1,5 +1,5 @@
 import os
-from flask import Flask, jsonify, Response, request, send_from_directory
+from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 from api.public.candles import get_candles
 from api.public.tickers import get_tickers, get_t_ticker
@@ -11,8 +11,6 @@ app = Flask(__name__)
 PORT = 3333
 
 CORS(app, origins=[f"http://localhost:{PORT}", "https://chat.openai.com"])
-
-bitfinex_api_url = "https://api-pub.bitfinex.com/v2/"
 
 
 @app.route("/tickers")
