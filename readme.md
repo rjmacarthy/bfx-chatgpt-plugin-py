@@ -4,19 +4,17 @@ This is an **unofficial** ChatGPT plugin for the [Bitfinex](https://www.bitfinex
 
 This ChatGPT plugin integrates with the Bitfinex Public API, enabling users to access data and analysis related to cryptocurrency trading within the ChatGPT environment.
 
-### Development / Usage:
+### Development
 
-You can run this plugin on localhost.
+Clone the repository, run the server and update the urls for testing purposes.
 
-To do that firstly clone this repository and run the `main.py` server.
+### Usage
 
-`python main.py` 
-
-It will start a server on `localhost:3333`
+The plugin is deployed at https://chatgpt-bitfinex-plugin.azurewebsites.net/
 
 Open ChatGPT, open plugins, and select "Develop your own plugin" option.
 
-- Enter localhost:3333 as the plugin URL.
+- Enter `https://chatgpt-bitfinex-plugin.azurewebsites.net/` as the plugin URL.
 - Install the plugin.
 - You are now ready to use the plugin on GPT4.
 
