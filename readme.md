@@ -10,11 +10,11 @@ Clone the repository, run the server and update the urls for testing purposes.
 
 ### Usage
 
-The plugin is deployed at https://chatgpt-bitfinex-plugin.azurewebsites.net/
+The plugin is deployed at https://chatgpt-bitfinex-plugin.azurewebsites.net
 
 Open ChatGPT, open plugins, and select "Develop your own plugin" option.
 
-- Enter `https://chatgpt-bitfinex-plugin.azurewebsites.net/` as the plugin URL.
+- Enter `https://chatgpt-bitfinex-plugin.azurewebsites.net` as the plugin URL.
 - Install the plugin.
 - You are now ready to use the plugin on GPT4.
 
