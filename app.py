@@ -2,7 +2,7 @@ import os
 from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 from api.public.candles import get_candles
-from api.public.tickers import get_tickers, get_t_ticker
+from api.public.tickers import get_tickers
 from api.public.stats import get_stats
 from api.public.book import get_t_book
 from indicators.indicators import get_indicators
@@ -17,6 +17,7 @@ CORS(
         "https://chat.openai.com",
     ],
 )
+
 
 @app.route("/")
 def index():
