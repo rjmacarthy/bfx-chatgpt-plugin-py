@@ -9,9 +9,14 @@ from indicators.indicators import get_indicators
 
 app = Flask(__name__)
 
-PORT = 3333
 
-CORS(app, origins=[f"http://localhost:{PORT}", "https://chat.openai.com"])
+CORS(
+    app,
+    origins=[
+        f"https://chatgpt-bitfinex-plugin.azurewebsites.net",
+        "https://chat.openai.com",
+    ],
+)
 
 
 @app.route("/tickers")

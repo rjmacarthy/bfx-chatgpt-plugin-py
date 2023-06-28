@@ -1,6 +1,7 @@
 import pandas as pd
 import pandas_ta as ta
 
+
 def get_indicators(candles):
     df = pd.DataFrame(candles)
     macd = df.ta.macd().dropna()
