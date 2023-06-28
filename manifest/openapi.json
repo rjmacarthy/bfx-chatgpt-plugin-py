@@ -275,7 +275,7 @@
   },
   "servers":[
     {
-      "url":"https://chatgpt-bitfinex-plugin.azurewebsites.net/"
+      "url":"localhost:3333"
     }
   ]
 }
