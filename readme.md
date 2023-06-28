@@ -23,9 +23,9 @@ Open ChatGPT, open plugins, and select "Develop your own plugin" option.
 You can issue the following commands, for example:
 
 - "Analyze the candles for Bitcoin USD"
-- "Give me the latest stats for Etherrum against USD"
+- "Give me the latest stats for Ethereum against USD"
 - "What do you think about the current BTCUSD book?"
-- "Compare the ETHUSD and BTCUSD tickers"
+- "Compare the ETHUSD and BTCUSD"
 
 GPT4 will analyze the current market data and provide a response.
 
