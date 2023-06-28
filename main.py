@@ -5,6 +5,7 @@ from api.public.candles import get_candles
 from api.public.tickers import get_tickers, get_t_ticker
 from api.public.stats import get_stats
 from api.public.book import get_t_book
+from indicators.indicators import get_indicators
 
 app = Flask(__name__)
 
@@ -33,7 +34,8 @@ def stats():
 @app.route("/candles")
 def candles():
     symbol = request.args.get("symbol") or "tBTCUSD"
-    return jsonify(get_candles(symbol)), 200
+    timeframe = request.args.get("timeframe") or "1h"
+    return jsonify(get_candles(symbol, timeframe)), 200
 
 
 @app.route("/book")
@@ -46,9 +48,10 @@ def book():
 @app.route("/analysis")
 def analysis():
     symbol = request.args.get("symbol") or "tBTCUSD"
-    candle_data = get_candles(symbol)
-    ticker = get_t_ticker(symbol)
-    return jsonify({"candles": candle_data, "ticker": ticker}), 200
+    timeframe = request.args.get("timeframe") or "1h"
+    candle_data = get_candles(symbol, timeframe)
+    data = get_indicators(candle_data)
+    return jsonify(data), 200
 
 
 @app.route("/.well-known/ai-plugin.json")
