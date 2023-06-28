@@ -73,10 +73,5 @@ def serve_openapi_json():
     return send_from_directory(os.path.dirname(__file__), "manifest/openapi.json")
 
 
-@app.route("/ai-plugin.json")
-def serve_ai_json():
-    return send_from_directory(os.path.dirname(__file__), "manifest/openapi.json")
-
-
 if __name__ == "__main__":
     app.run()
