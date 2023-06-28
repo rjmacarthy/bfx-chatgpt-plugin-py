@@ -1,6 +1,6 @@
 {
   "info":{
-    "title":"Bitfinex Public API",
+    "title":"Bitfinex Analysis API",
     "version":"1.0"
   },
   "openapi":"3.0.0",
@@ -275,7 +275,7 @@
   },
   "servers":[
     {
-      "url":"http://localhost:3333"
+      "url":"https://chatgpt-bitfinex-plugin.azurewebsites.net/"
     }
   ]
 }
