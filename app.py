@@ -18,6 +18,10 @@ CORS(
     ],
 )
 
+@app.route("/")
+def index():
+    return "Welcome to the Unofficial Bitfinex ChatGPT plugin"
+
 
 @app.route("/tickers")
 def tickers():
