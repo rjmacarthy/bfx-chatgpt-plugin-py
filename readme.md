@@ -34,3 +34,8 @@ This plugin is licensed under the MIT license, allowing you to do whatever you w
 ### Contributing:
 
 Contributions are welcome. Please open a pull request (PR) to contribute to the project.
+
+### TODO
+
+- Write the `openapi.json` better and add proper responses.
+- Probably a lot more things.
